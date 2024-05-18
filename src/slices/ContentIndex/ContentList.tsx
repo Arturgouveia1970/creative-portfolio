@@ -139,8 +139,9 @@ export default function ContentList({
 
 
   return (
-    <div ref={component}>
+    <div>
       <ul
+        ref={component}
         className="grid border-b border-b-slate-100"
         onMouseLeave={onMouseLeave}
       >
@@ -149,9 +150,9 @@ export default function ContentList({
             {isFilled.keyText(item.data.title) && (
               <li
                 key={index}
-                className="list-item opacity-0"
-                onMouseEnter={() => onMouseEnter(index)}
                 ref={(el) => (itemsRef.current[index] = el)}
+                className="list-item opacity-0"
+                onMouseEnter={() => onMouseEnter(index)}                
               >
                 <Link
                   className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row"
