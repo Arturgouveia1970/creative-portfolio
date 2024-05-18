@@ -31,7 +31,7 @@ export default function ContentList({
 
   const lastMousePos = useRef({ x: 0, y: 0 });
 
-  const urlPrefix = contentType === "Blog" ? "/blog" : "/project";
+  const urlPrefix = contentType === "Blog" ? "/blog" : "/projects";
 
   useEffect(() => {
     // Animate list-items in with a stagger
@@ -149,7 +149,7 @@ export default function ContentList({
             {isFilled.keyText(item.data.title) && (
               <li
                 key={index}
-                className="list-item opacity-0k"
+                className="list-item opacity-0"
                 onMouseEnter={() => onMouseEnter(index)}
                 ref={(el) => (itemsRef.current[index] = el)}
               >
